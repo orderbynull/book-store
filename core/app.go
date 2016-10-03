@@ -41,7 +41,7 @@ func (app *App) SetFatalWriter(w io.Writer) *App {
 
 //Fatal пишет фатальную ошибку
 func (app *App) Fatal(err error) {
-	fmt.Fprintf(app.FatalWriter, err)
+	fmt.Fprint(app.FatalWriter, err)
 }
 
 //AddRoutes добавляет роуты приложения
